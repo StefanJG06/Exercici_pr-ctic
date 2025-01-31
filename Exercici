@@ -1,0 +1,30 @@
+# Codi base 
+productes = [
+    {"nom": "poma", "preu": 1.5},
+    {"nom": "plàtan", "preu": 2.2},
+    {"nom": "pera", "preu": 1.8},
+    {"nom": "maduixa", "preu": 3.0},
+    {"nom": "préssec", "preu": 2.5}
+]
+
+# Exercici 1
+# Apartat a)
+productes_menys_dos_euros= [x for x in productes if x['preu']< 2] 
+print('Productes que costen menys de dos euros: (list comprehension)',productes_menys_dos_euros)
+# Apartat b)
+# No l'he sapigut fer
+
+# Exercici 2
+# Apartat a)
+productes_preu_menys_dos_euros=[]
+for producte in productes:
+   if producte['preu']<2: 
+    productes_preu_menys_dos_euros.append(producte)
+print('Productes que costen menys de dos euros: (bucles)',productes_preu_menys_dos_euros)
+
+# Apartat b)
+funció_apujar = lambda c: (c * 0.1) + c
+for producte in productes:
+    producte['preu'] = funció_apujar(producte['preu'])
+print('Productes caviats de preu:',productes)
+
